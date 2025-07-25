@@ -1,3 +1,5 @@
+// this is an interface defining the product and our products array
+// this file is used to define the structure of a product and provide a list of products
 export interface Product {
     id: number;
     name: string;

@@ -14,7 +14,11 @@ import { ToastrService } from 'ngx-toastr';
     imports: [NgFor, TitleCasePipe, CurrencyPipe]
 })
 export class ProductListComponent {
+  // Injecting CartService and ToastrService to use in this component
+  // inject() is a function that allows you to inject dependencies in Angular.
   private cartService = inject(CartService);
+  // ToastrService is used to show notifications to the user.
+  // It provides a way to display success, error, and info messages.
   private toastr = inject(ToastrService);
   
   products = products;

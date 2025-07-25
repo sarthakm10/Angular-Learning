@@ -1,13 +1,21 @@
 <h2>Pies and Cakes</h2>
 <div class="gallery-wrapper">
     <div *ngFor="let product of products" class="pie-item">
+        <!-- ngFor we use this inside the element we want to repeat for each item in the collection -->
+        <!-- to get the product details we using a static file product.ts -->
         <img [src]="product.image" alt="image of {{ product.name }}" />
+        <!-- "{{ product.image }}"  is called property binding -->
+        <!-- "{{ product.name }}"  is called interpolation -->
         <div class="pie-info">
             <h4>{{ product.name | titlecase }}</h4>
             <p>{{ product.price | currency}}</p>
+            <!-- titlecase pipe transforms the first letter of each word to uppercase
+                 and currency pipe formats the number as a currency -->
         </div>
+        <!-- product.description is called data binding -->
         <div class="add-to-cart">
             <p><a (click)="addToCart(product)">+ Add to cart</a></p>
+            <!-- "(click)" is called event binding -->
         </div>
     </div>
 </div>

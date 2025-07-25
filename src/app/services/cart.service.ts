@@ -3,6 +3,7 @@ import { Product } from '../models/products';
 import { Injectable, inject, signal } from '@angular/core';
 import { ShippingPrice } from '../models/shippingPrice';
 
+// @Injectable() decorator marks this class as a service that can be injected into components or other services.
 @Injectable({
   providedIn: 'root' // This service is provided in the root injector for your app and should be available globally.
 })
